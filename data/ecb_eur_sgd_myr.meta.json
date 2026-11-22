@@ -1,0 +1,9 @@
+{
+  "source": "ECB statistics",
+  "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.zip",
+  "zip_bytes": 643621,
+  "zip_sha256": "e9eb14dc6b891d182675809374bcc34f2afb3418d1142a3e05fa0bd13637804e",
+  "rows": 3044,
+  "first": "2015-01-02",
+  "last": "2026-11-20"
+}

@@ -1,0 +1,136 @@
+{
+  "bidders": [
+    {
+      "name": "Bidder X",
+      "quality": 80.0,
+      "price": 100.0
+    },
+    {
+      "name": "Bidder Y",
+      "quality": 88.0,
+      "price": 108.69565217391303
+    }
+  ],
+  "switching_weight": 0.46808510638297857,
+  "winners": [
+    {
+      "w_quality": 0.0,
+      "winner": "Bidder X"
+    },
+    {
+      "w_quality": 0.05,
+      "winner": "Bidder X"
+    },
+    {
+      "w_quality": 0.1,
+      "winner": "Bidder X"
+    },
+    {
+      "w_quality": 0.15,
+      "winner": "Bidder X"
+    },
+    {
+      "w_quality": 0.2,
+      "winner": "Bidder X"
+    },
+    {
+      "w_quality": 0.25,
+      "winner": "Bidder X"
+    },
+    {
+      "w_quality": 0.3,
+      "winner": "Bidder X"
+    },
+    {
+      "w_quality": 0.35,
+      "winner": "Bidder X"
+    },
+    {
+      "w_quality": 0.4,
+      "winner": "Bidder X"
+    },
+    {
+      "w_quality": 0.45,
+      "winner": "Bidder X"
+    },
+    {
+      "w_quality": 0.5,
+      "winner": "Bidder Y"
+    },
+    {
+      "w_quality": 0.55,
+      "winner": "Bidder Y"
+    },
+    {
+      "w_quality": 0.6,
+      "winner": "Bidder Y"
+    },
+    {
+      "w_quality": 0.65,
+      "winner": "Bidder Y"
+    },
+    {
+      "w_quality": 0.7,
+      "winner": "Bidder Y"
+    },
+    {
+      "w_quality": 0.75,
+      "winner": "Bidder Y"
+    },
+    {
+      "w_quality": 0.8,
+      "winner": "Bidder Y"
+    },
+    {
+      "w_quality": 0.85,
+      "winner": "Bidder Y"
+    },
+    {
+      "w_quality": 0.9,
+      "winner": "Bidder Y"
+    },
+    {
+      "w_quality": 0.95,
+      "winner": "Bidder Y"
+    },
+    {
+      "w_quality": 1.0,
+      "winner": "Bidder Y"
+    }
+  ],
+  "years": 11,
+  "aggressive_bids": [
+    {
+      "discount": 0.0,
+      "fee_m": 146.4463258951218,
+      "margin_mean": 0.05034939313069832,
+      "margin_p5": 0.013017400539213148,
+      "p_loss_cumulative": 0.02955,
+      "p_loss_year": 0.05165909090909091
+    },
+    {
+      "discount": 0.04,
+      "fee_m": 140.5884728593169,
+      "margin_mean": 0.010780617844477357,
+      "margin_p5": -0.028106874438319693,
+      "p_loss_cumulative": 0.1866,
+      "p_loss_year": 0.25683181818181816
+    },
+    {
+      "discount": 0.08,
+      "fee_m": 134.73061982351206,
+      "margin_mean": -0.03222892051011043,
+      "margin_p5": -0.07280717332694207,
+      "p_loss_cumulative": 0.9974,
+      "p_loss_year": 0.8769
+    },
+    {
+      "discount": 0.12,
+      "fee_m": 128.87276678770718,
+      "margin_mean": -0.07914841689693371,
+      "margin_p5": -0.12157113575089411,
+      "p_loss_cumulative": 1.0,
+      "p_loss_year": 1.0
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "n_inputs": 29,
+  "REAL": 11,
+  "DERIVED": 4,
+  "ASSUMPTION": 8,
+  "ILLUSTRATIVE": 5,
+  "SYNTHETIC": 1,
+  "facts": {
+    "n_facts": 81,
+    "n_verified": 76,
+    "n_unverified": 5,
+    "n_conflicts": 4,
+    "n_sources": 39
+  }
+}

@@ -1,0 +1,550 @@
+{
+  "n_sims": 20000,
+  "seed": 20261123,
+  "years": 15,
+  "terms": {
+    "A": 34.263503434489124,
+    "B": 148.30997349239902,
+    "C": 26.041433128735576,
+    "D": 15.224680906995765
+  },
+  "base_year": {
+    "fare_revenue_m": 144.8499594484996,
+    "nonfare_revenue_m": 11.587996755879969,
+    "opex_m": 135.0,
+    "fare_to_opex": 1.0729626625814785
+  },
+  "deterministic_margin": {
+    "A": 0.05000000000000001,
+    "B": 0.04999999999999986,
+    "C": 0.049999999999999996,
+    "D": 0.05000000000000001
+  },
+  "metrics": {
+    "A": {
+      "name": "Net-cost concession",
+      "margin_mean": 0.03322067370332398,
+      "margin_p5": -0.04201961192538252,
+      "margin_p50": 0.04569625472508036,
+      "margin_p95": 0.07771004323339159,
+      "p_loss_year": 0.38800666666666667,
+      "p_loss_cumulative": 0.24465,
+      "operator_npv_mean": 54.6989943799222,
+      "operator_npv_sd": 90.90240938511518,
+      "operator_npv_cvar5": -180.5061219655237,
+      "authority_npv_mean": 433.84134401036846,
+      "authority_npv_sd": 20.68505476373597,
+      "authority_npv_p5": 397.08357199688743,
+      "authority_npv_cvar5": 370.7083005086089,
+      "identity_max_abs_error": 2.842170943040401e-14
+    },
+    "B": {
+      "name": "Gross-cost service fee",
+      "margin_mean": 0.05066660128840642,
+      "margin_p5": 0.00720964086961842,
+      "margin_p50": 0.056299508683396934,
+      "margin_p95": 0.07418561477159073,
+      "p_loss_year": 0.06865,
+      "p_loss_cumulative": 0.0315,
+      "operator_npv_mean": 107.55037838640176,
+      "operator_npv_sd": 45.7531553346442,
+      "operator_npv_cvar5": -40.52116815285386,
+      "authority_npv_mean": 380.9899600038889,
+      "authority_npv_sd": 84.90832510470678,
+      "authority_npv_p5": 223.1113899153344,
+      "authority_npv_cvar5": 168.22191819440812,
+      "identity_max_abs_error": 2.842170943040401e-14
+    },
+    "C": {
+      "name": "Hybrid with sharing bands",
+      "margin_mean": 0.040852963925477125,
+      "margin_p5": 0.007673395272185404,
+      "margin_p50": 0.04726541982053753,
+      "margin_p95": 0.05684491960283647,
+      "p_loss_year": 0.21084,
+      "p_loss_cumulative": 0.05015,
+      "operator_npv_mean": 87.27712190520604,
+      "operator_npv_sd": 45.23902479288879,
+      "operator_npv_cvar5": -40.38341576372224,
+      "authority_npv_mean": 401.26321648508457,
+      "authority_npv_sd": 57.4265197220187,
+      "authority_npv_p5": 294.4739215057133,
+      "authority_npv_cvar5": 257.2775633218094,
+      "identity_max_abs_error": 2.842170943040401e-14
+    },
+    "D": {
+      "name": "Long concession, operator-set fares",
+      "margin_mean": 0.03264200485798622,
+      "margin_p5": -0.042906688332370116,
+      "margin_p50": 0.04534315001993863,
+      "margin_p95": 0.07800568799850192,
+      "p_loss_year": 0.27041,
+      "p_loss_cumulative": 0.2276,
+      "operator_npv_mean": 63.73816151016669,
+      "operator_npv_sd": 87.0606590340696,
+      "operator_npv_cvar5": -164.5966600476359,
+      "authority_npv_mean": 200.0643026554378,
+      "authority_npv_sd": 4.004292411660612,
+      "authority_npv_p5": 193.49887609578207,
+      "authority_npv_cvar5": 191.88719716043235,
+      "identity_max_abs_error": 1.4210854715202004e-14
+    }
+  },
+  "concession_30_years": {
+    "name": "Long concession, operator-set fares",
+    "margin_mean": 0.03227682975909131,
+    "margin_p5": -0.04043087251784711,
+    "margin_p50": 0.039773425939902664,
+    "margin_p95": 0.08243464236368896,
+    "p_loss_year": 0.4156416666666667,
+    "p_loss_cumulative": 0.3272,
+    "operator_npv_mean": 45.76637594066644,
+    "operator_npv_sd": 166.60509005743836,
+    "operator_npv_cvar5": -392.6327402368193,
+    "authority_npv_mean": 646.1531728995932,
+    "authority_npv_sd": 18.229850451483298,
+    "authority_npv_p5": 616.8398845922135,
+    "authority_npv_cvar5": 609.8935861894223,
+    "identity_max_abs_error": 5.684341886080802e-14,
+    "years": 30,
+    "fixed_payment_m": 28.14929546320986,
+    "p_at_least_one_pandemic": 0.44338334756894193
+  },
+  "risk_allocation": [
+    {
+      "shock": "ridership",
+      "label": "Ridership 10% lower in every year",
+      "A": {
+        "operator": -243.10801151547616,
+        "authority": 0.0,
+        "operator_share": 1.0
+      },
+      "B": {
+        "operator": 0.0,
+        "authority": -243.10801151547605,
+        "operator_share": -0.0
+      },
+      "C": {
+        "operator": -115.22482050717227,
+        "authority": -127.88319100830392,
+        "operator_share": 0.47396554226612597
+      },
+      "D": {
+        "operator": -228.1707535248369,
+        "authority": 0.0,
+        "operator_share": 1.0
+      }
+    },
+    {
+      "shock": "pandemic",
+      "label": "Pandemic-like fall starting in year 3",
+      "A": {
+        "operator": -161.41522931152758,
+        "authority": 0.0,
+        "operator_share": 1.0
+      },
+      "B": {
+        "operator": 0.0,
+        "authority": -161.41522931152747,
+        "operator_share": -0.0
+      },
+      "C": {
+        "operator": -98.88925631781173,
+        "authority": -62.52597299371587,
+        "operator_share": 0.6126389482553583
+      },
+      "D": {
+        "operator": -155.88166178936365,
+        "authority": 0.0,
+        "operator_share": 1.0
+      }
+    },
+    {
+      "shock": "energy",
+      "label": "Energy prices 30% higher from year 1",
+      "A": {
+        "operator": -5.978754318858691,
+        "authority": -2.8435092501287045,
+        "operator_share": 0.6776893789339511
+      },
+      "B": {
+        "operator": -18.902343152172477,
+        "authority": 10.080079583185238,
+        "operator_share": 2.142572935433439
+      },
+      "C": {
+        "operator": -2.7114277263252973,
+        "authority": -6.110835842662141,
+        "operator_share": 0.30733923387379564
+      },
+      "D": {
+        "operator": -10.449001653657163,
+        "authority": 0.0,
+        "operator_share": 1.0
+      }
+    },
+    {
+      "shock": "wages",
+      "label": "Wage growth 1 point higher each year",
+      "A": {
+        "operator": -8.660604653917545,
+        "authority": 0.0,
+        "operator_share": 1.0
+      },
+      "B": {
+        "operator": -23.237425796353094,
+        "authority": 14.57682114243562,
+        "operator_share": 2.6831181799577988
+      },
+      "C": {
+        "operator": 0.9994971351472515,
+        "authority": -9.66010178906481,
+        "operator_share": -0.11540731566532557
+      },
+      "D": {
+        "operator": -13.780527523686487,
+        "authority": 0.0,
+        "operator_share": 1.0
+      }
+    },
+    {
+      "shock": "fare_cap",
+      "label": "Yearly fare increases capped at 2% (deferral covered)",
+      "A": {
+        "operator": -10.967960285017313,
+        "authority": -222.1808407702958,
+        "operator_share": 0.04704274795912518
+      },
+      "B": {
+        "operator": 0.0,
+        "authority": -233.14880105531302,
+        "operator_share": -0.0
+      },
+      "C": {
+        "operator": -7.184180573322465,
+        "authority": -225.96462048199072,
+        "operator_share": 0.030813714421023593
+      },
+      "D": {
+        "operator": 0.0,
+        "authority": 0.0,
+        "operator_share": null
+      }
+    },
+    {
+      "shock": "reliability",
+      "label": "Reliability 1 standard deviation below target every year",
+      "A": {
+        "operator": 0.0,
+        "authority": 0.0,
+        "operator_share": null
+      },
+      "B": {
+        "operator": -19.955839025969794,
+        "authority": 19.95583902596985,
+        "operator_share": null
+      },
+      "C": {
+        "operator": 0.0,
+        "authority": 0.0,
+        "operator_share": null
+      },
+      "D": {
+        "operator": 0.0,
+        "authority": 0.0,
+        "operator_share": null
+      }
+    },
+    {
+      "shock": "fare_cap_uncovered",
+      "label": "Yearly fare increases capped at 2% (deferral not covered)",
+      "A": {
+        "operator": -233.14880105531313,
+        "authority": 0.0,
+        "operator_share": 1.0
+      },
+      "B": {
+        "operator": 0.0,
+        "authority": -233.14880105531302,
+        "operator_share": -0.0
+      },
+      "C": {
+        "operator": -80.22778907313815,
+        "authority": -152.92101198217506,
+        "operator_share": 0.3441055184929069
+      },
+      "D": {
+        "operator": 0.0,
+        "authority": 0.0,
+        "operator_share": null
+      }
+    }
+  ],
+  "marginal_incentives": {
+    "expected": {
+      "A": {
+        "revenue": 1.0,
+        "cost": 0.9999999999999432,
+        "reliability_m": 0.0
+      },
+      "B": {
+        "revenue": 0.0,
+        "cost": 0.9999999999999432,
+        "reliability_m": 1.6658832510394177
+      },
+      "C": {
+        "revenue": 0.5250000000000037,
+        "cost": 0.4999999999999716,
+        "reliability_m": 0.0
+      },
+      "D": {
+        "revenue": 1.0,
+        "cost": 0.9999999999999432,
+        "reliability_m": 0.0
+      }
+    },
+    "ridership 20% below projection": {
+      "A": {
+        "revenue": 1.0,
+        "cost": 0.9999999999999432,
+        "reliability_m": 0.0
+      },
+      "B": {
+        "revenue": 0.0,
+        "cost": 0.9999999999999432,
+        "reliability_m": 1.6658832510394177
+      },
+      "C": {
+        "revenue": 0.534455109410454,
+        "cost": 0.9999999999999432,
+        "reliability_m": 0.0
+      },
+      "D": {
+        "revenue": 1.0,
+        "cost": 0.9999999999999432,
+        "reliability_m": 0.0
+      }
+    },
+    "ridership 15% above projection": {
+      "A": {
+        "revenue": 1.0,
+        "cost": 0.9999999999999432,
+        "reliability_m": 0.0
+      },
+      "B": {
+        "revenue": 0.0,
+        "cost": 0.9999999999999432,
+        "reliability_m": 1.6658832510394177
+      },
+      "C": {
+        "revenue": 0.11100000000000608,
+        "cost": 0.05000000000002558,
+        "reliability_m": 0.0
+      },
+      "D": {
+        "revenue": 1.0,
+        "cost": 0.9999999999999432,
+        "reliability_m": 0.0
+      }
+    }
+  },
+  "tornado": [
+    {
+      "driver": "Ridership -10% / +10%",
+      "A": {
+        "adverse": -243.10801151547616,
+        "favourable": 243.1080115154765
+      },
+      "B": {
+        "adverse": 0.0,
+        "favourable": 0.0
+      },
+      "C": {
+        "adverse": -115.22482050717227,
+        "favourable": 73.47137832298057
+      },
+      "D": {
+        "adverse": -228.1707535248369,
+        "favourable": 228.1707535248371
+      }
+    },
+    {
+      "driver": "Energy price +30% / -30%",
+      "A": {
+        "adverse": -5.978754318858691,
+        "favourable": 6.605324209325545
+      },
+      "B": {
+        "adverse": -18.902343152172477,
+        "favourable": 18.902343152171767
+      },
+      "C": {
+        "adverse": -2.7114277263252973,
+        "favourable": 2.688776982376993
+      },
+      "D": {
+        "adverse": -10.449001653657163,
+        "favourable": 10.449001653656126
+      }
+    },
+    {
+      "driver": "Wage growth +1 / -1 point",
+      "A": {
+        "adverse": -8.660604653917545,
+        "favourable": 5.0128017998537615
+      },
+      "B": {
+        "adverse": -23.237425796353094,
+        "favourable": 19.079565159408858
+      },
+      "C": {
+        "adverse": 0.9994971351472515,
+        "favourable": -1.4921877121585823
+      },
+      "D": {
+        "adverse": -13.780527523686487,
+        "favourable": 9.956865951610496
+      }
+    },
+    {
+      "driver": "Inflation +1 / -1 point",
+      "A": {
+        "adverse": 18.92315968419304,
+        "favourable": -20.45896837814466
+      },
+      "B": {
+        "adverse": 19.80576031180955,
+        "favourable": -20.62741089772142
+      },
+      "C": {
+        "adverse": 8.52285662114899,
+        "favourable": -8.629142490738488
+      },
+      "D": {
+        "adverse": 29.46884768874625,
+        "favourable": -29.9317817570506
+      }
+    },
+    {
+      "driver": "Fare cap 2% / 8%",
+      "A": {
+        "adverse": -10.967960285017313,
+        "favourable": 0.0
+      },
+      "B": {
+        "adverse": 0.0,
+        "favourable": 0.0
+      },
+      "C": {
+        "adverse": -7.184180573322465,
+        "favourable": 0.0
+      },
+      "D": {
+        "adverse": 0.0,
+        "favourable": 0.0
+      }
+    },
+    {
+      "driver": "Reliability -1 / +1 sd",
+      "A": {
+        "adverse": 0.0,
+        "favourable": 0.0
+      },
+      "B": {
+        "adverse": -19.955839025969794,
+        "favourable": 19.955839025969837
+      },
+      "C": {
+        "adverse": 0.0,
+        "favourable": 0.0
+      },
+      "D": {
+        "adverse": 0.0,
+        "favourable": 0.0
+      }
+    }
+  ],
+  "sanity": {
+    "derived": {
+      "implied_rail_fare_revenue_m": 1140.0,
+      "rail_boardings_m": 1350.135,
+      "fare_per_boarding": 0.8443600084436,
+      "line_trips_m": 171.55,
+      "sbs_group_margin": 0.04489405872079613
+    },
+    "cost_shares": {
+      "staff": 0.5282777750943605,
+      "maintenance": 0.1356879170318031,
+      "energy": 0.14100039331231068,
+      "other": 0.19503391456152577
+    },
+    "pandemic_path": [
+      0.5978132387706856,
+      0.6205673758865248,
+      0.8111702127659575,
+      0.9583333333333334
+    ],
+    "model_fare_to_opex": 1.0729626625814785,
+    "smrt_trains_fy2018_fare_to_opex": 0.7255369928400954,
+    "dtl_fy2017_fare_to_opex": 0.5227272727272727,
+    "model_opex_m": 135.0,
+    "dtl_fy2017_opex_m": 132.0,
+    "model_opex_over_dtl_fy2017": 1.0227272727272727,
+    "model_fare_revenue_m": 144.8499594484996,
+    "dtl_fy2017_fare_m": 69.0,
+    "model_fare_over_dtl_fy2017": 2.099274774615936,
+    "target_margin": 0.05,
+    "sbs_group_margin_2025": 0.04489405872079613
+  },
+  "mapping": [
+    {
+      "arrangement": "New Rail Financing Framework version one (Downtown Line, 2011 to 2021)",
+      "closest_archetype": "A",
+      "confidence": "Medium",
+      "basis": "F02, F03, F09",
+      "what_public_sources_do_not_say": "The licence charge had a fixed and a variable part, so it was not a pure fixed charge; amounts are not public"
+    },
+    {
+      "arrangement": "New Rail Financing Framework version two (North-South, East-West, Circle, North East and Downtown lines and the LRT systems)",
+      "closest_archetype": "C",
+      "confidence": "Medium",
+      "basis": "F04, F05, F06, F08, F09",
+      "what_public_sources_do_not_say": "Thresholds, sharing rates and the level of the effective margin cap"
+    },
+    {
+      "arrangement": "Thomson-East Coast Line, first nine-year period",
+      "closest_archetype": "B",
+      "confidence": "High for the form",
+      "basis": "F17, F18, F19",
+      "what_public_sources_do_not_say": "Size of incentives and deductions; fee indexation"
+    },
+    {
+      "arrangement": "Jurong Region Line, first licensing period",
+      "closest_archetype": "B",
+      "confidence": "High for the form",
+      "basis": "F22, F26, F27",
+      "what_public_sources_do_not_say": "Size of incentives and deductions; fee indexation"
+    },
+    {
+      "arrangement": "Cross Island Line",
+      "closest_archetype": "B as tendered in 2023; not awarded",
+      "confidence": "Low",
+      "basis": "F25, F29, F34",
+      "what_public_sources_do_not_say": "Whether a later award will keep the tendered form; no award had been announced when sources were checked"
+    },
+    {
+      "arrangement": "RTS Link (RTS Operations Pte Ltd, first 30-year concession)",
+      "closest_archetype": "D in part",
+      "confidence": "Low to medium",
+      "basis": "F64, F65, F66, F70",
+      "what_public_sources_do_not_say": "Whether and how payments flow between the operator and the two grantors; the payment term in archetype D is a placeholder"
+    },
+    {
+      "arrangement": "Singapore Rail Test Centre",
+      "closest_archetype": "none",
+      "confidence": "Not mapped",
+      "basis": "F35, F36, F37",
+      "what_public_sources_do_not_say": "No public description of an operating contract was found"
+    }
+  ]
+}

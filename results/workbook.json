@@ -1,0 +1,7 @@
+{
+  "file": "results/rail_contract_model.xlsx",
+  "cells_compared": 633,
+  "cells_evaluated": 1036,
+  "max_abs_difference": 5.684341886080802e-14,
+  "grid_rows": 27
+}

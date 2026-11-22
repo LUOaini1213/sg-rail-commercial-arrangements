@@ -1,0 +1,297 @@
+{
+  "inputs": {
+    "capacity_pphpd": 10000,
+    "opening_estimate": 40000,
+    "woodlands_daily": 300000,
+    "concession_years": 30,
+    "shuttle_fare_sgd": 5.0,
+    "shuttle_fare_myr": 5.0,
+    "press_range_low": 5.0,
+    "press_range_high": 7.0,
+    "hours": 18,
+    "peak_hours": 4,
+    "offpeak_load": 0.25,
+    "value_of_time": 15.0,
+    "reference_fare": 5.0,
+    "reference_cost_m": 100.0,
+    "myr_revenue_share": 0.5,
+    "myr_cost_share": 0.5
+  },
+  "opening_share_of_woodlands": 0.13333333333333333,
+  "opening_share_of_peaked_ceiling": 0.26666666666666666,
+  "ceiling": {
+    "all_day_full": 360000.0,
+    "peaked_profile": 150000.0
+  },
+  "fx": {
+    "first_date": "2015-01-02",
+    "last_date": "2026-11-20",
+    "n_days": 3044,
+    "latest": 3.1918079096045195,
+    "min": 2.623853807634779,
+    "max": 3.5678485370051636,
+    "p5": 2.8385418309188584,
+    "p50": 3.092297024185119,
+    "p95": 3.4817009462265314,
+    "annual_volatility": 0.04953369077979584
+  },
+  "ridership": [
+    {
+      "label": "Published opening estimate",
+      "daily": 40000.0,
+      "provenance": "REAL"
+    },
+    {
+      "label": "10% of Woodlands Checkpoint volume",
+      "daily": 30000.0,
+      "provenance": "ILLUSTRATIVE"
+    },
+    {
+      "label": "20% of Woodlands Checkpoint volume",
+      "daily": 60000.0,
+      "provenance": "ILLUSTRATIVE"
+    },
+    {
+      "label": "35% of Woodlands Checkpoint volume",
+      "daily": 105000.0,
+      "provenance": "ILLUSTRATIVE"
+    }
+  ],
+  "revenue": [
+    {
+      "label": "Published opening estimate",
+      "daily": 40000.0,
+      "by_fare": [
+        {
+          "fare_sgd": 4.0,
+          "revenue_sgd_m": 58.4,
+          "revenue_myr_m": 186.40158192090394
+        },
+        {
+          "fare_sgd": 5.0,
+          "revenue_sgd_m": 73.0,
+          "revenue_myr_m": 233.00197740112992
+        },
+        {
+          "fare_sgd": 6.0,
+          "revenue_sgd_m": 87.6,
+          "revenue_myr_m": 279.6023728813559
+        },
+        {
+          "fare_sgd": 7.0,
+          "revenue_sgd_m": 102.2,
+          "revenue_myr_m": 326.2027683615819
+        }
+      ]
+    },
+    {
+      "label": "10% of Woodlands Checkpoint volume",
+      "daily": 30000.0,
+      "by_fare": [
+        {
+          "fare_sgd": 4.0,
+          "revenue_sgd_m": 43.8,
+          "revenue_myr_m": 139.80118644067795
+        },
+        {
+          "fare_sgd": 5.0,
+          "revenue_sgd_m": 54.75,
+          "revenue_myr_m": 174.75148305084744
+        },
+        {
+          "fare_sgd": 6.0,
+          "revenue_sgd_m": 65.7,
+          "revenue_myr_m": 209.70177966101696
+        },
+        {
+          "fare_sgd": 7.0,
+          "revenue_sgd_m": 76.65,
+          "revenue_myr_m": 244.65207627118644
+        }
+      ]
+    },
+    {
+      "label": "20% of Woodlands Checkpoint volume",
+      "daily": 60000.0,
+      "by_fare": [
+        {
+          "fare_sgd": 4.0,
+          "revenue_sgd_m": 87.6,
+          "revenue_myr_m": 279.6023728813559
+        },
+        {
+          "fare_sgd": 5.0,
+          "revenue_sgd_m": 109.5,
+          "revenue_myr_m": 349.5029661016949
+        },
+        {
+          "fare_sgd": 6.0,
+          "revenue_sgd_m": 131.4,
+          "revenue_myr_m": 419.4035593220339
+        },
+        {
+          "fare_sgd": 7.0,
+          "revenue_sgd_m": 153.3,
+          "revenue_myr_m": 489.3041525423729
+        }
+      ]
+    },
+    {
+      "label": "35% of Woodlands Checkpoint volume",
+      "daily": 105000.0,
+      "by_fare": [
+        {
+          "fare_sgd": 4.0,
+          "revenue_sgd_m": 153.3,
+          "revenue_myr_m": 489.3041525423729
+        },
+        {
+          "fare_sgd": 5.0,
+          "revenue_sgd_m": 191.625,
+          "revenue_myr_m": 611.6301906779661
+        },
+        {
+          "fare_sgd": 6.0,
+          "revenue_sgd_m": 229.95,
+          "revenue_myr_m": 733.9562288135593
+        },
+        {
+          "fare_sgd": 7.0,
+          "revenue_sgd_m": 268.275,
+          "revenue_myr_m": 856.2822669491524
+        }
+      ]
+    }
+  ],
+  "break_even": [
+    {
+      "cost_m": 60.0,
+      "by_fare": [
+        {
+          "fare_sgd": 4.0,
+          "daily_trips": 41095.890410958906,
+          "share_of_opening_estimate": 1.0273972602739727,
+          "share_of_peaked_ceiling": 0.273972602739726
+        },
+        {
+          "fare_sgd": 5.0,
+          "daily_trips": 32876.71232876712,
+          "share_of_opening_estimate": 0.821917808219178,
+          "share_of_peaked_ceiling": 0.2191780821917808
+        },
+        {
+          "fare_sgd": 6.0,
+          "daily_trips": 27397.260273972603,
+          "share_of_opening_estimate": 0.684931506849315,
+          "share_of_peaked_ceiling": 0.182648401826484
+        },
+        {
+          "fare_sgd": 7.0,
+          "daily_trips": 23483.365949119372,
+          "share_of_opening_estimate": 0.5870841487279843,
+          "share_of_peaked_ceiling": 0.15655577299412915
+        }
+      ]
+    },
+    {
+      "cost_m": 100.0,
+      "by_fare": [
+        {
+          "fare_sgd": 4.0,
+          "daily_trips": 68493.1506849315,
+          "share_of_opening_estimate": 1.7123287671232876,
+          "share_of_peaked_ceiling": 0.45662100456621
+        },
+        {
+          "fare_sgd": 5.0,
+          "daily_trips": 54794.520547945205,
+          "share_of_opening_estimate": 1.36986301369863,
+          "share_of_peaked_ceiling": 0.365296803652968
+        },
+        {
+          "fare_sgd": 6.0,
+          "daily_trips": 45662.100456621,
+          "share_of_opening_estimate": 1.1415525114155252,
+          "share_of_peaked_ceiling": 0.30441400304414
+        },
+        {
+          "fare_sgd": 7.0,
+          "daily_trips": 39138.94324853229,
+          "share_of_opening_estimate": 0.9784735812133073,
+          "share_of_peaked_ceiling": 0.2609262883235486
+        }
+      ]
+    },
+    {
+      "cost_m": 140.0,
+      "by_fare": [
+        {
+          "fare_sgd": 4.0,
+          "daily_trips": 95890.4109589041,
+          "share_of_opening_estimate": 2.3972602739726026,
+          "share_of_peaked_ceiling": 0.639269406392694
+        },
+        {
+          "fare_sgd": 5.0,
+          "daily_trips": 76712.32876712328,
+          "share_of_opening_estimate": 1.917808219178082,
+          "share_of_peaked_ceiling": 0.5114155251141552
+        },
+        {
+          "fare_sgd": 6.0,
+          "daily_trips": 63926.94063926941,
+          "share_of_opening_estimate": 1.5981735159817352,
+          "share_of_peaked_ceiling": 0.4261796042617961
+        },
+        {
+          "fare_sgd": 7.0,
+          "daily_trips": 54794.520547945205,
+          "share_of_opening_estimate": 1.36986301369863,
+          "share_of_peaked_ceiling": 0.365296803652968
+        }
+      ]
+    }
+  ],
+  "reference_revenue_m": 73.0,
+  "shuttle_fare_myr_in_sgd": 1.56651031064696,
+  "fx_sensitivity": [
+    {
+      "label": "Ringgit strong (5th percentile since 2015)",
+      "myr_per_sgd": 2.8385418309188584,
+      "revenue_factor": 1.062226681819113,
+      "revenue_sgd_m": 77.54254777279526,
+      "margin_matched_m": -28.680120409116043,
+      "margin_sgd_costs_m": -22.45745222720474
+    },
+    {
+      "label": "Latest",
+      "myr_per_sgd": 3.1918079096045195,
+      "revenue_factor": 1.0,
+      "revenue_sgd_m": 73.0,
+      "margin_matched_m": -27.0,
+      "margin_sgd_costs_m": -27.0
+    },
+    {
+      "label": "Ringgit weak (95th percentile since 2015)",
+      "myr_per_sgd": 3.4817009462265314,
+      "revenue_factor": 0.9583690499127735,
+      "revenue_sgd_m": 69.96094064363247,
+      "margin_matched_m": -25.87596434764488,
+      "margin_sgd_costs_m": -30.03905935636753
+    }
+  ],
+  "time_savings": [
+    {
+      "minutes": 20,
+      "value_m": 73.0
+    },
+    {
+      "minutes": 40,
+      "value_m": 146.0
+    },
+    {
+      "minutes": 60,
+      "value_m": 219.0
+    }
+  ]
+}
