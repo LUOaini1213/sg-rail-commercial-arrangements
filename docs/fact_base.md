@@ -46,7 +46,7 @@ Quotes are short extracts for verification. Follow the link for the full context
 - Quote: "The DTL was the first rail line to be placed on the NRFF, in 2011."
 
 **F08 (VERIFIED)** Downtown Line moved to NRFF version two from 1 January 2022 under a single 11-year licence with NEL and SPLRT.
-- Value: 11-year licence term from 2022-01-01. As of: 2021-11-11.
+- Value: 11-year licence. As of: 2021-11-11.
 - Source: [LTA](https://www.lta.gov.sg/content/ltagov/en/newsroom/2021/11/news-releases/Transition_of_DTL_to_NRFFv2.html)
 - Quote: "under a single licence with the other rail lines operated by SBST, North East Line (NEL) and Sengkang-Punggol LRT (SPLRT), with a licence term of 11 years"
 
@@ -132,7 +132,7 @@ Quotes are short extracts for verification. Follow the link for the full context
 ## JRL
 
 **F22 (VERIFIED)** Jurong Region Line operation awarded to SRJV (SBS Transit Rail and RATP Dev Asia Pacific); nine years plus optional two; service fee about S$750 million for 11 years.
-- Value: 9+2 years; about S$750m. As of: 2024-11-28.
+- Value: nine years plus an optional two, about S$750 million for 11 years. As of: 2024-11-28.
 - Source: [LTA](https://www.lta.gov.sg/content/ltagov/en/newsroom/2024/11/news-releases/JRL_operations_awarded_to_joint_venture.html)
 - Quote: "The first licensing period for JRL is for nine years, with the option for LTA to extend the licence for an additional two years. The service fee quoted for 11 years is approximately $750 million."
 
@@ -237,7 +237,7 @@ Quotes are short extracts for verification. Follow the link for the full context
 - Quote: "with a Capacity Adjustment Factor, fixed at 1.1% for the next five years"
 
 **F41 (VERIFIED)** Fare Review Exercise 2026: formula output 5.3%; maximum allowable 14.7%.
-- Value: 5.3%; 14.7%. As of: 2026-09-29.
+- Value: 5.3% (maximum allowable 14.7%). As of: 2026-09-29.
 - Source: [Public Transport Council](https://www.ptc.gov.sg/media-centre/newsroom/fare-review-exercise-2026/)
 - Quote: "For the 2026 FRE, the output from the fare adjustment formula is 5.3%."
 
@@ -360,7 +360,7 @@ Quotes are short extracts for verification. Follow the link for the full context
 - Quote: "Each Government separately appointed an infrastructure company (InfraCo) to fund, build, own, maintain and renew the civil infrastructure and stations in its territory up to the international boundary."
 
 **F64 (VERIFIED)** RTS Operations Pte Ltd (joint venture of SMRT RTS and Prasarana RTS Operations) appointed as operating company for the first 30-year concession period.
-- Value: 30 years. As of: 2020-07-30.
+- Value: 30-year. As of: 2020-07-30.
 - Source: [Ministry of Transport, Singapore (joint statement with Malaysia)](https://www.mot.gov.sg/news-resources/newsroom/joint-statement-by-singapore-and-malaysia-on-resumption-of-the-johor-bahru-singapore-rapid-transit-system-link-project/)
 - Quote: "to appoint RTS Operations Pte. Ltd. as the OpCo for the first 30-year concession period"
 

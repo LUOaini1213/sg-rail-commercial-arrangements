@@ -64,7 +64,7 @@ PROJECTION = [
     ("B_fee", "term_B*(1+fee_indexation*({c}6-1))", "term_B*(1+fee_indexation*({c}6-1))"),
     ("B_operator", "{c}25-{c}21", "{c}25-{c}21"),
     ("B_authority", "{c}14+{c}15-{c}25", "{c}14+{c}15-{c}25"),
-    ("C_relief", "shortfall_share*MAX(0,{c}14*(1-deadband)-{c}14)", "shortfall_share*MAX(0,{c}14*(1-deadband)-{c}14)"),
+    ("C_relief", "shortfall_share*MAX(0,{c}36*(1-deadband)-{c}14)", "shortfall_share*MAX(0,{c}36*(1-deadband)-{c}14)"),
     ("C_pre", "{c}14+{c}15-{c}21-term_C*{c}2+{c}28+{c}16", "{c}14+{c}15-{c}21-term_C*{c}2+{c}28+{c}16"),
     ("C_share", "rate1*MAX(0,MIN({c}29,band2*({c}14+{c}15))-band1*({c}14+{c}15))+rate2*MAX(0,{c}29-band2*({c}14+{c}15))",
      "rate1*MAX(0,MIN({c}29,band2*({c}14+{c}15))-band1*({c}14+{c}15))+rate2*MAX(0,{c}29-band2*({c}14+{c}15))"),
@@ -76,6 +76,8 @@ PROJECTION = [
     ("D_authority", "term_D*{c}2+revenue_share*{c}33", "term_D*{c}2+revenue_share*{c}33"),
 ]
 PROJECTION_ROW = {name: i + 2 for i, (name, _, _) in enumerate(PROJECTION)}
+PROJECTED_ROW = len(PROJECTION) + 2   # projected fare revenue agreed at the start: values, not formulas
+assert PROJECTED_ROW == 36
 GRID_COLS = ["ridership_mult", "opex_mult", "fare_rev", "nonfare", "opex", "A_operator", "A_authority",
              "B_operator", "B_authority", "C_relief", "C_pre", "C_share", "C_operator", "C_authority",
              "D_operator", "D_authority", "surplus"]
@@ -116,6 +118,9 @@ def build(p: dict, terms: dict, path: Path = PATH) -> Path:
             c, pc = get_column_letter(t + 2), get_column_letter(t + 1)
             expr = (first if t == 0 else later).format(c=c, p=pc, y=f"{c}$1")
             pr.cell(row=r, column=t + 2, value="=" + _sub(expr))
+    pr.cell(row=PROJECTED_ROW, column=1, value="projected_fare_rev (fixed at award)")
+    for t in range(T):
+        pr.cell(row=PROJECTED_ROW, column=t + 2, value=float(terms["projected_fare_rev"][t]))
     gr = wb.create_sheet("ScenarioGrid")
     gr.append(GRID_COLS)
     r = 2

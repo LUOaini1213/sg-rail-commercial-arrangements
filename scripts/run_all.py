@@ -174,11 +174,21 @@ def main() -> None:
     p = params.base_params()
     arche = analysis.run(p)
     arche["sanity"] = sanity(arche)
+    arche["params"] = {k: v for k, v in p.items() if isinstance(v, (int, float))}
+    arche["params"]["shock_fare_cap"] = dict(analysis.SHOCKS[4][2])["fare_cap"]
+    ra = {x["shock"]: x for x in arche["risk_allocation"]}
+    arche["headline"] = {"fare_cap_cost_authority_A": -ra["fare_cap"]["A"]["authority"],
+                         "fare_cap_cost_operator_A_uncovered": -ra["fare_cap_uncovered"]["A"]["operator"],
+                         "ridership_share_C": ra["ridership"]["C"]["operator_share"],
+                         "pandemic_share_C": ra["pandemic"]["C"]["operator_share"],
+                         "reliability_swing_B": ra["reliability"]["B"]["authority"]}
     arche["mapping"] = mapping()
     dump("archetypes.json", arche)
     r = rts.run()
     dump("rts.json", r)
-    dump("procurement.json", procurement.run(p))
+    proc = procurement.run(p)
+    proc["params"] = {"gap": params.JRL_BID_GAP}
+    dump("procurement.json", proc)
     labels = [row[1] for row in params.PROVENANCE]
     dump("provenance.json", {"n_inputs": len(labels), **{k: labels.count(k) for k in
                              ("REAL", "DERIVED", "ASSUMPTION", "ILLUSTRATIVE", "SYNTHETIC")},

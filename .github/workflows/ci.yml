@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Re-run every analysis offline (no network is used)
+        run: python scripts/run_all.py --no-figures
+      - name: Generated documents are up to date
+        run: python scripts/build_docs.py --check
+      - name: Tests, including the workbook comparison and the golden results
+        run: python -m pytest -q
+
+  mutation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Every planted bug must make a behavioural test fail
+        run: python scripts/mutate.py --record ci --require-all

@@ -132,5 +132,8 @@
       "p_loss_cumulative": 1.0,
       "p_loss_year": 1.0
     }
-  ]
+  ],
+  "params": {
+    "gap": 0.08
+  }
 }
