@@ -29,7 +29,7 @@ and 20,000 simulated paths. They describe the archetypes, not any real operator.
 
 - **Fact base.** 81 facts from 39 sources;
   76 VERIFIED against a primary source and
-  5 UNVERIFIED. 4 rows record a
+  5 UNVERIFIED. 6 rows record a
   conflict or a superseded statement. See [docs/fact_base.md](docs/fact_base.md).
 - **Latest dated statements found** (sources accessed 2026-11-23): RTS Link passenger
   service is expected in February 2027, subject to safety certification and regulatory approval (F72); no RTS
@@ -336,7 +336,7 @@ python -m venv .venv
 .venv/Scripts/python -m pip install -r requirements.txt     # or .venv/bin/python
 python scripts/run_all.py            # results/*.json, the workbook, figures (offline)
 python scripts/build_docs.py         # README and docs from templates
-python -m pytest -q                  # 69 tests, offline
+python -m pytest -q                  # 70 tests, offline
 python scripts/mutate.py --record final
 python scripts/verify_facts.py       # needs network: re-opens every source
 ```
@@ -346,8 +346,8 @@ a ridership-by-cost scenario grid as live formulas. A test evaluates
 1,052 formula cells with the `formulas` package and compares
 633 of them with the Python model.
 
-Mutation testing: 0 of 0 hand-written mutants
-are killed by the test suite (0 of 0 on the first
+Mutation testing: 61 of 63 hand-written mutants
+are killed by the test suite (61 of 63 on the first
 run; see `results/mutation.json`).
 
 ## Layout

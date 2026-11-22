@@ -1,1 +1,40 @@
-{"first":{"total":0,"killed":0,"survivors":[],"equivalent":[]},"final":{"total":0,"killed":0,"survivors":[],"equivalent":[]}}
+{
+  "first": {
+    "total": 63,
+    "killed": 61,
+    "survivors": [
+      {
+        "index": 35,
+        "file": "railca/analysis.py",
+        "original": "return operator.sum(axis=1) / revenue.sum(axis=1)",
+        "mutant": "return (operator / revenue).mean(axis=1)"
+      },
+      {
+        "index": 40,
+        "file": "railca/analysis.py",
+        "original": "\"p_loss_year\": float((r[\"operator\"] < 0).mean()),",
+        "mutant": "\"p_loss_year\": float((r[\"operator\"] < 1).mean()),"
+      }
+    ],
+    "equivalent": []
+  },
+  "final": {
+    "total": 63,
+    "killed": 61,
+    "survivors": [
+      {
+        "index": 35,
+        "file": "railca/analysis.py",
+        "original": "return operator.sum(axis=1) / revenue.sum(axis=1)",
+        "mutant": "return (operator / revenue).mean(axis=1)"
+      },
+      {
+        "index": 40,
+        "file": "railca/analysis.py",
+        "original": "\"p_loss_year\": float((r[\"operator\"] < 0).mean()),",
+        "mutant": "\"p_loss_year\": float((r[\"operator\"] < 1).mean()),"
+      }
+    ],
+    "equivalent": []
+  }
+}

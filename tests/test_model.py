@@ -330,3 +330,12 @@ def test_aggressive_bids_get_riskier():
         assert b["margin_p5"] < a["margin_p5"] and b["p_loss_year"] >= a["p_loss_year"]
     assert rows[0]["p_loss_cumulative"] < 0.1 < rows[2]["p_loss_cumulative"]
     assert rows[0]["margin_p5"] < rows[0]["margin_mean"]
+
+
+def test_margin_is_revenue_weighted_and_small_profits_are_not_losses():
+    m = analysis.cumulative_margin(np.array([[1.0, 6.0]]), np.array([[10.0, 30.0]]))
+    assert m[0] == pytest.approx(7.0 / 40.0)
+    op = np.array([[0.5, 0.2], [-1.0, 3.0]])
+    res = {"A": {"operator": op, "authority": -op, "revenue": np.full((2, 2), 10.0), "surplus": np.zeros((2, 2))}}
+    m = analysis.metrics(dict(P, discount=0.0), res)["A"]
+    assert m["p_loss_year"] == pytest.approx(0.25) and m["p_loss_cumulative"] == 0.0
