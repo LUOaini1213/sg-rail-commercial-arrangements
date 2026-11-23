@@ -346,7 +346,7 @@ a ridership-by-cost scenario grid as live formulas. A test evaluates
 1,052 formula cells with the `formulas` package and compares
 633 of them with the Python model.
 
-Mutation testing: 61 of 63 hand-written mutants
+Mutation testing: 63 of 63 hand-written mutants
 are killed by the test suite (61 of 63 on the first
 run; see `results/mutation.json`).
 
